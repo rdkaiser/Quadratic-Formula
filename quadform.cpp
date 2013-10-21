@@ -23,9 +23,9 @@ int main (void)
     cout << "\nFor the quatratic equation y = ax^2 + bx + c, enter the values of a, b, and c";
     cout << "\nNOTE: values must be +-1000000000";
 
-/*********************************************/
-/* Get value of a & check for proper data type 
-/*********************************************/   
+//***********************************************
+//  Get value of a & check for proper data type 
+//*********************************************** 
 	check_sw=0;
 	do {
 		cout << "\na= "; cin >> a;
@@ -39,9 +39,9 @@ int main (void)
 	}
 	while(check_sw==0);
 
-/*********************************************/
-/* Get value of b & check for proper data type 
-/*********************************************/
+//*********************************************
+// Get value of b & check for proper data type 
+//*********************************************
 	check_sw=0;
 	do {
 		cout << "\nb= "; cin >> b;
@@ -49,9 +49,9 @@ int main (void)
 	}
 	while(check_sw==0);
 
-/*********************************************/
-/* Get value of c & check for proper data type 
-/*********************************************/
+//*********************************************
+// Get value of c & check for proper data type 
+//*********************************************
 	check_sw=0;
 	do {
 		cout << "\nc= "; cin >> c;
@@ -59,15 +59,15 @@ int main (void)
 	}
 	while(check_sw==0);
 
-/*********************************************/
-/* Apply the Quadratic Formula
-/*********************************************/
+//*********************************************
+//  Apply the Quadratic Formula
+//*********************************************
 	check_sw=0;
 	check_sw=quad_form(a,b,c);
 
-/*******************************************************/
-/* Print the number of real roots for the given quadratic
-/*******************************************************/
+//*******************************************************
+// Print the number of real roots for the given quadratic
+//*******************************************************
 	switch (check_sw)
     {
         case 0:cout << "The are no real roots." << endl;
@@ -78,9 +78,9 @@ int main (void)
                 break;
     }
 
-/**************************************************************/
-/* A response of 'n' ends the program. Character input required 
-/**************************************************************/
+//**************************************************************
+// A response of 'n' ends the program. Character input required 
+//**************************************************************
     check_sw=0;
     do {
         cout << "\nWould you like to enter a range of x-values for the quadratic equation" << endl;
@@ -105,9 +105,9 @@ int main (void)
         check_sw=1;
 		check_sw=IntCheck(xmin);
 
-/***************************************************/
-/* Only enter the loops if initial input is invalid  
-/***************************************************/
+//***************************************************
+// Only enter the loops if initial input is invalid  
+//***************************************************
 	while((check_sw==0 || (xmin < -100 || xmin > 99))){
             cout << "\nEnter the lower x-value (integer from -100 to 99):" << endl;
             cout << "xmin= ";
@@ -129,9 +129,9 @@ int main (void)
             check_sw=IntCheck(xmax);
         }
 
-/***************************************************/
-/* Print a table of the requested x and y values.  
-/***************************************************/
+//***************************************************
+// Print a table of the requested x and y values.  
+//***************************************************
         double y;
         double x=0;
 
@@ -159,9 +159,9 @@ int coeff_check(double coeff)
 
  int quad_form(double A, double B, double C)
 {
-/***********************************************************************************/
-/* Seperate root arguments. If negative, roots are imaginary and the function exits.  
-/**********************************************************************************/
+//*************************************************************************************
+// Seperate root arguments. If negative, roots are imaginary and the function exits.  
+//*************************************************************************************
     double root_args = pow(B,2) - 4 * A * C; 
     double deno = 2 * A;
 
@@ -186,10 +186,10 @@ int coeff_check(double coeff)
     return(num_roots);
 }
 
- /*********************************************************/
- /* Returns 1 for an integer, 0 for floating point.
- /* NOTE: This does not work for invalid character input.
- /********************************************************/
+//*********************************************************
+// Returns 1 for an integer, 0 for floating point.
+// NOTE: This does not work for invalid character input.
+//********************************************************
 int IntCheck(double X)
 {
     int Xint=static_cast<int>(X);
