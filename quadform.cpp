@@ -8,16 +8,16 @@
 #include <cmath>
 using namespace std;
 
-double x1,x2;						 // roots of the quadratic. values assigned in quad_form(), printed in main()
-int coeff_check(double);			 // function to check whether input for coefficients a,b,c are valid
-int quad_form(double,double,double); // updates global variables x1 & x2 for printing in main() and returns the number of real roots for given quadratic.
-int IntCheck(double);				 // checks whether a number is an integer
+double x1,x2;                                    // roots of the quadratic. values assigned in quad_form(), printed in main()
+int coeff_check(double);                         // function to check whether input for coefficients a,b,c are valid
+int quad_form(double,double,double);             // updates global variables x1 & x2 for printing in main() and returns the number of real roots for given quadratic.
+int IntCheck(double);                            // checks whether a number is an integer
 
 int main (void)
 {
-    double a,b,c;   // quadratic coefficeints
-    int check_sw;   // general purpose working variable
-    char ans;       // whether user wants to enter a range of x-values. must be 'y' or 'n'
+    double a,b,c;    // quadratic coefficeints
+    int check_sw;    // general purpose working variable
+    char ans;        // whether user wants to enter a range of x-values. must be 'y' or 'n'
 
     cout << "\nFor the quatratic equation y = ax^2 + bx + c, enter the values of a, b, and c";
     cout << "\nNOTE: values must be +-1000000000";
