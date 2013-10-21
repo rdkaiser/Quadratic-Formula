@@ -1,8 +1,10 @@
-/*************************************/
-/*	
-/*             
-/*			   
-/*************************************/
+//*******************************************************
+//
+//   Given a quadratic equation, find the roots. Also, 
+//   print a table of values determined by the user
+//
+//			   
+//*******************************************************
 #include <iostream>
 #include <iomanip>
 #include <cmath>
