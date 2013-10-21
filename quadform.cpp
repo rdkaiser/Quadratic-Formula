@@ -27,45 +27,43 @@ int main (void)
 /* Get value of a & check for proper data type 
 /*********************************************/   
 	check_sw=0;
-    do {
-        cout << "\na= "; cin >> a;
+	do {
+		cout << "\na= "; cin >> a;
 
-        if(a==0){
-            cout << "A quadratic, by definition, cannot have a zero value for 'a'." << endl;
-            check_sw=0;
-        }
-        else
-            check_sw = coeff_check(a);
-    }
-    while(check_sw==0);
+	        if(a==0){
+	            cout << "A quadratic, by definition, cannot have a zero value for 'a'." << endl;
+	            check_sw=0;
+	        }
+	        else
+	            check_sw = coeff_check(a);
+	}
+	while(check_sw==0);
 
 /*********************************************/
 /* Get value of b & check for proper data type 
 /*********************************************/
-    check_sw=0;
-    do {
-        cout << "\nb= "; cin >> b;
-        check_sw = coeff_check(b);
-    }
-    while(check_sw==0);
+	check_sw=0;
+	do {
+		cout << "\nb= "; cin >> b;
+		check_sw = coeff_check(b);
+	}
+	while(check_sw==0);
 
 /*********************************************/
 /* Get value of c & check for proper data type 
 /*********************************************/
-    check_sw=0;
-    do {
-        cout << "\nc= "; cin >> c;
-        check_sw = coeff_check(c);
-    }
-    while(check_sw==0);
-
-
+	check_sw=0;
+	do {
+		cout << "\nc= "; cin >> c;
+		check_sw = coeff_check(c);
+	}
+	while(check_sw==0);
 
 /*********************************************/
 /* Apply the Quadratic Formula
 /*********************************************/
-    check_sw=0;
-    check_sw=quad_form(a,b,c);
+	check_sw=0;
+	check_sw=quad_form(a,b,c);
 
 /*******************************************************/
 /* Print the number of real roots for the given quadratic
@@ -110,7 +108,7 @@ int main (void)
 /***************************************************/
 /* Only enter the loops if initial input is invalid  
 /***************************************************/
-		while((check_sw==0 || (xmin < -100 || xmin > 99))){
+	while((check_sw==0 || (xmin < -100 || xmin > 99))){
             cout << "\nEnter the lower x-value (integer from -100 to 99):" << endl;
             cout << "xmin= ";
             cin >> xmin;
@@ -149,14 +147,14 @@ return 0;
 int coeff_check(double coeff)
 {
 	bool valid;
-    if ((coeff >= -1000000000.0) && (coeff <= 1000000000.0))
-       valid = true;
-    else{
-       valid = false;
-       cout << "ERROR: Invalid Input. Try again" << endl;
-       cout << "Values must be +-1,000,000,000 " << endl;
-    }
-   return (valid);
+	if ((coeff >= -1000000000.0) && (coeff <= 1000000000.0))
+		valid = true;
+	else{
+        	valid = false;
+       		cout << "ERROR: Invalid Input. Try again" << endl;
+       		cout << "Values must be +-1,000,000,000 " << endl;
+	}
+   	return (valid);
 }
 
  int quad_form(double A, double B, double C)
